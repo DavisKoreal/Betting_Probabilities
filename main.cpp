@@ -21,6 +21,7 @@ int main()
         string homename;
         getline(cin, homename);
         homenames.push_back(homename);
+        i++;
     }
 
     cout << "Please enter a list of five teams that are playing away today " << endl;
@@ -30,6 +31,7 @@ int main()
         string awayname;
         getline(cin, awayname);
         awaynames.push_back(awayname);
+        i++;
     }
 
     cout << "Please enter a list of five odds for the home teams " << endl;
@@ -39,6 +41,7 @@ int main()
         double homeodd;
         cin>> homeodd;
         homeodds.push_back(homeodd);
+        i++;
     }
 
     cout << "Please enter a list of five odds for the away teams " << endl;
@@ -48,6 +51,7 @@ int main()
         double awayodd;
         cin>> awayodd;
         awayodds.push_back(awayodd);
+        i++;
     }
 
     cout << "Please enter a list of five odds for the draw teams " << endl;
@@ -57,6 +61,7 @@ int main()
         double drawodd;
         cin>> drawodd;
         drawodds.push_back(drawodd);
+        i++;
     }
 
 
