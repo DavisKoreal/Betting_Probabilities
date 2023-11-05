@@ -71,11 +71,11 @@ using namespace std;
      * **/
     void multibet::get_sequence_combinations()
     {
-        cout << "I am now mapping the combinations to string phrases that are readbale to you. " << endl;
+        cout << "I am now mapping the combinations to string phrases that are readable to you. " << endl;
         
         for(auto i:combinations)
         {
-            cout << "The vector here is of size "<< i.size() << endl;
+            //cout << "The vector here is of size "<< i.size() << endl;
             string sequence;
             vector<double> odds;
             int k =0;
@@ -83,7 +83,7 @@ using namespace std;
             {
                 odds.push_back(games[k].game_information[j].odd);
                 string addand = games[k].game_information[j].team_wins;
-                cout << "the addand is " << addand<< endl;
+                //cout << "the addand is " << addand<< endl;
                 sequence += addand;
                k++;
             }
@@ -94,20 +94,22 @@ using namespace std;
             sequence_combinations.push_back(temp);
         }
 
-        cout << "\n We are now outputting the sequences \n";
+        cout << "\n I am now outputting the sequences. Please be patient. \n";
 
         for(auto i:sequence_combinations)
         {
-            cout << "\n\nThe sequence is " << i.games_outcomes_sentence << endl;
-            cout << "The odds are ";
+            //cout << "\n\nThe sequence is " << i.games_outcomes_sentence << endl;
+            //cout << "The odds are ";
             for(auto j:i.games_outcomes_odds)
             {
                 cout << j << " ";
             }
+            /**
             cout << endl;
             cout << "The total odds are " << i.total_odds << endl;
             cout << "The relative probability is " << i.relative_probability << endl;
             cout << endl;
+            **/
         }
 
     }
