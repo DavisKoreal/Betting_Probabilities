@@ -8,11 +8,58 @@ int main()
      * **/ 
 
     vector<game> TodaysGames;
-    vector<string> homenames = {"Canada", "chile", "queretaro", "llaneros", "central_cordoba"};
-    vector<double> homeodds = {3.1, 2.95, 2.95, 1.49, 2.8};
-    vector<string> awaynames = {"Brazil", "usau19", "chivas", "atletico", "santa_fe"};
-    vector<double> awayodds = {2.29, 2.02, 2.33, 6.8, 2.8};
-    vector<double> drawodds = {3.15, 3.5, 3.3, 3.7, 2.85};
+    vector<string> homenames;
+    vector<double> homeodds;
+    vector<string> awaynames;
+    vector<double> awayodds;
+    vector<double> drawodds ;
+
+    cout << "Please enter a list of five teams that are playing home today " << endl;
+    int i = 0;
+    while(i<5)
+    {
+        string homename;
+        getline(cin, homename);
+        homenames.push_back(homename);
+    }
+
+    cout << "Please enter a list of five teams that are playing away today " << endl;
+    i = 0;
+    while(i<5)
+    {
+        string awayname;
+        getline(cin, awayname);
+        awaynames.push_back(awayname);
+    }
+
+    cout << "Please enter a list of five odds for the home teams " << endl;
+    i = 0;
+    while(i<5)
+    {
+        double homeodd;
+        cin>> homeodd;
+        homeodds.push_back(homeodd);
+    }
+
+    cout << "Please enter a list of five odds for the away teams " << endl;
+    i = 0;
+    while(i<5)
+    {
+        double awayodd;
+        cin>> awayodd;
+        awayodds.push_back(awayodd);
+    }
+
+    cout << "Please enter a list of five odds for the draw teams " << endl;
+    i = 0;
+    while(i<5)
+    {
+        double drawodd;
+        cin>> drawodd;
+        drawodds.push_back(drawodd);
+    }
+
+
 
     for(int i = 0; i < 5; i++)
     {
